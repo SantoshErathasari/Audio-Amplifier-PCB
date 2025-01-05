@@ -1,6 +1,6 @@
 # Audio Amplifier PCB
 
-This project is an audio amplifier PCB design that integrates a microphone input, auxiliary input, volume control, and an LM386 op-amp to amplify audio signals. The amplified signal can drive a speaker, with additional functionality to visually indicate signal strength using LEDs.
+This project is an audio amplifier PCB design that integrates a microphone input, auxiliary input, volume control, and an LM386 op-amp to amplify audio signals. The amplified signal can drive a speaker, with additional functionality to visually indicate signal strength using LEDs. The purpose of this project was to help create a portable speaker system to amplify audio. This PCB can fit in the palm of anyones hand while delivering quality audio output and signal detection via the led indicator system.
 
 ## Features
 
@@ -25,15 +25,16 @@ This project is an audio amplifier PCB design that integrates a microphone input
    - Decoupling and bypass capacitors (C6, C7, C10) ensure stable operation.
 
 3. **Volume Control**:
-   - A potentiometer (Volume Adj) allows the user to adjust the input signal level.
+   - A potentiometer (10KOhm) (Volume Adj) allows the user to adjust the input signal level.
 
 4. **LED Signal Indicators**:
    - An LM393N comparator drives LEDs to indicate signal levels.
    - Resistors (R1–R4) limit current through the LEDs.
+   - Resistor Divider Network (R5-R9) producing different voltages at each connection that connectes to the LM393N
 
 5. **Power Supply**:
    - Powered by a 7-12V DC input (J2).
-   - Decoupling capacitors (C1, C9) stabilize the power supply.
+   - Decoupling capacitors (C1, C9) stabilize the power supply reducing DC noise.
 
 ### Additional Features
 - **Switches**:
@@ -44,12 +45,6 @@ This project is an audio amplifier PCB design that integrates a microphone input
   - J1: Microphone/Auxiliary input.
   - J3: Speaker output.
 
-## Applications
-
-- DIY audio projects.
-- Portable speaker systems.
-- Signal visualization for audio signals.
-
 ## How to Use
 
 1. Connect a microphone or auxiliary input to J1.
@@ -57,3 +52,4 @@ This project is an audio amplifier PCB design that integrates a microphone input
 3. Connect a speaker to J3.
 4. Power the circuit via J2 (7-12V DC).
 5. Observe the LEDs for visual signal feedback.
+6. When in Mic mode, speak or create noise and the PCB will detect it via the LED indicator system
